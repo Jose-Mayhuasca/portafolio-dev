@@ -12,11 +12,13 @@ import FooterSection from '../components/HomeSections/FooterSection.vue';
 
 <template>
     <NavbarSection />
-    <HeroSection />
-    <PresentationSection />
-    <AboutMeSection />
-    <TecnologiesSection />
-    <ProjectsSection />
-    <ContactSection />
-    <FooterSection />
+    <div style="display: flex; flex-direction: column; gap: 7.875rem;">
+        <HeroSection />
+        <PresentationSection />
+        <AboutMeSection />
+        <TecnologiesSection />
+        <ProjectsSection />
+        <ContactSection />
+        <FooterSection />
+    </div>
 </template>

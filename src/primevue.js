@@ -16,6 +16,7 @@ import Divider from 'primevue/divider'
 import Tag from 'primevue/tag'
 import Textarea from 'primevue/textarea'
 import Menubar from 'primevue/menubar'
+import Skeleton from 'primevue/skeleton'
 
 export default {
   Button,
@@ -35,4 +36,5 @@ export default {
   Tag,
   Textarea,
   Menubar,
+  Skeleton,
 }
