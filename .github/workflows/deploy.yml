@@ -1,22 +1,25 @@
-name: Deploy Vite site to GitHub Pages
+name: Deploy Vite project to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Cambia esto si tu rama principal tiene otro nombre
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: '20' # ✅ Cambiado a Node 20
 
       - name: Install dependencies
         run: npm install
