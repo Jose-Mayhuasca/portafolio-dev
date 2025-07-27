@@ -6,10 +6,10 @@ import { Textarea } from 'primevue';
 <template>
     <section class="contactSection">
         <div class="conteiner">
-            <div class="title colorBlue boldItalic">
+            <div class="title colorBlue boldItalic slide-in-left">
                 <h2>Contactame</h2>
             </div>
-            <div class="content">
+            <div class="content slide-in-right">
                 <div class="videoConteiner">
                     <video autoplay loop muted class="video">
                         <source src="/src/assets/videos/bgContactHome.mp4" type="video/mp4">

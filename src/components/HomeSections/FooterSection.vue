@@ -1,6 +1,6 @@
 <template>
     <section class="footerSection">
-        <div class="conteiner">
+        <div class="conteiner slide-in-bck-center">
             <div class="phrase colorWhite">
                 <h4 class="mediumItalic">
                     Transformo ideas en <br> experiencias interactivas.

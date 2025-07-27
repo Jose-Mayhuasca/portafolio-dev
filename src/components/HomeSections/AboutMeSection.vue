@@ -1,10 +1,10 @@
 <template>
     <section class="aboutmeSection">
         <div class="conteiner">
-            <div class="title boldItalic colorBlue">
+            <div class="title boldItalic colorBlue slide-in-blurred-bottom">
                 <h2>Conoce mas acerca de mi</h2>
             </div>
-            <div class="imageConteiner">
+            <div class="imageConteiner slide-in-bottom-view">
                 <!-- <img src="@/assets/images/aboutme.png" alt="About Me" /> -->
                 <Skeleton width="380px" height="311px"></Skeleton>
 

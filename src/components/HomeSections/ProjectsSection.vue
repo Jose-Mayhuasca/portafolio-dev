@@ -1,10 +1,10 @@
 <template>
     <section class="projectsSection">
         <div class="conteiner">
-            <div class="title colorBlue boldItalic">
+            <div class="title colorBlue boldItalic slide-in-left">
                 <h2>Proyectos</h2>
             </div>
-            <div class="content">
+            <div class="content slide-in-right">
                 <Card class="card">
                     <template #header>
                         <img alt="user header" src="/src/assets/images/imgProject1.jpg" class="cardImage" />

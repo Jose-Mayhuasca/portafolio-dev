@@ -1,5 +1,5 @@
 <template>
-    <section class="navbarSection">
+    <section class="navbarSection ">
         <div class="conteinerNavbar">
             <Menubar :model="items" class="navbar regular superSmall" />
         </div>
