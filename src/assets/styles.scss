@@ -331,11 +331,17 @@ h4 {
 }
 
 /* Breakpoints */
+//mobile → 0 - 480px
 $bp-mobile: 480px;
-$bp-tablet: 768px;
-$bp-laptop: 1023px;
-$bp-desktop: 1439px;
-$bp-other: 2559px;
+
+//tablet → 481 - 1023px
+$bp-tablet: 1023px;
+
+//laptop → 1024 - 1279px
+$bp-laptop: 1279px;
+
+//desktop → 1280 - 1920 o mas
+$bp-desktop: 1280px;
 
 // @media (max-width: $bp-tablet) {
 //   /* estilos móviles */
@@ -578,6 +584,13 @@ $bp-other: 2559px;
 //     }
 //   }
 // }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 .navbarSection {
   width: 100%;
