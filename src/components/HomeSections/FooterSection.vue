@@ -59,7 +59,7 @@
         </div>
         <div class="copyright">
             <p class="small regular">
-                © 2025 José Mayhuasca Pérez. Todos los derechos reservados.
+                © 2025 José Mayhuasca Pérez. <br class="break">Todos los derechos reservados.
             </p>
         </div>
     </section>

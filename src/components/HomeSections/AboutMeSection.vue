@@ -2,11 +2,11 @@
     <section class="aboutmeSection">
         <div class="conteiner">
             <div class="title boldItalic colorBlue slide-in-blurred-bottom">
-                <h2>Conoce mas acerca de mi</h2>
+                <h2>Conoce mas <br class="break"> acerca de mi</h2>
             </div>
             <div class="imageConteiner slide-in-bottom-view">
                 <!-- <img src="@/assets/images/aboutme.png" alt="About Me" /> -->
-                <Skeleton width="380px" height="311px"></Skeleton>
+                <Skeleton width="100%" height="100%"></Skeleton>
 
             </div>
 

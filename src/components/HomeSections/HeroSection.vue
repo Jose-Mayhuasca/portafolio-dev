@@ -6,7 +6,9 @@
                 Tu navegador no soporta videos HTML5.
             </video>
             <div class="content slide-in-bottom">
-                <h1 class="regular colorWhite">Cada <span class="boldItalic">linea de codigo</span> cuenta. <br> Cada
+                <h1 class="regular colorWhite">Cada <span class="boldItalic">linea de codigo</span> cuenta. <br><br
+                        class="break">
+                    Cada
                     <span class="boldItalic">detalle</span> importa.
                 </h1>
             </div>
