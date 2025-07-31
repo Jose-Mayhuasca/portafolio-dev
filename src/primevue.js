@@ -17,6 +17,7 @@ import Tag from 'primevue/tag'
 import Textarea from 'primevue/textarea'
 import Menubar from 'primevue/menubar'
 import Skeleton from 'primevue/skeleton'
+import Carousel from 'primevue/carousel'
 
 export default {
   Button,
@@ -37,4 +38,5 @@ export default {
   Textarea,
   Menubar,
   Skeleton,
+  Carousel,
 }
