@@ -14,11 +14,11 @@ import TechnologiesSection from '../components/HomeSections/TechnologiesSection.
     <NavbarSection />
     <div class="homepage">
         <HeroSection />
-        <PresentationSection />
-        <AboutMeSection />
+        <PresentationSection id="presentationSection" />
+        <AboutMeSection id="aboutMeSection" />
         <TechnologiesSection />
-        <ProjectsSection />
-        <ContactSection />
+        <ProjectsSection id="projectsSection" />
+        <ContactSection id="contactSection" />
         <FooterSection />
     </div>
 </template>

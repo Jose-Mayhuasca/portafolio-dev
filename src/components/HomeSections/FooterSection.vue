@@ -25,16 +25,16 @@
                         <div class="items small regular colorGrey">
                             <ol>
                                 <li>
-                                    <a href="#home">Inicio</a>
+                                    <a href="#home" @click.prevent="smoothScroll('#presentationSection')">Inicio</a>
                                 </li>
                                 <li>
-                                    <a href="#about">Sobre mí</a>
+                                    <a href="#about" @click.prevent="smoothScroll('#aboutMeSection')">Sobre mí</a>
                                 </li>
                                 <li>
-                                    <a href="#projects">Proyectos</a>
+                                    <a href="#projects" @click.prevent="smoothScroll('#projectsSection')">Proyectos</a>
                                 </li>
                                 <li>
-                                    <a href="#contact">Contacto</a>
+                                    <a href="#contact" @click.prevent="smoothScroll('#contactSection')">Contacto</a>
                                 </li>
                             </ol>
                         </div>
@@ -46,10 +46,12 @@
                         <div class="items small regular colorGrey">
                             <ol>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/jose-mayhuasca-perez-123456789/">LinkedIn</a>
+                                    <a href="https://www.linkedin.com/in/josedmayhuasca/" rel="noopener noreferrer"
+                                        target="_blank">LinkedIn</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/jose-mayhuasca-perez-123456789/">Instagram</a>
+                                    <a href="https://www.instagram.com/josedmayhuasca/" rel="noopener noreferrer"
+                                        target="_blank">Instagram</a>
                                 </li>
                             </ol>
                         </div>
@@ -64,3 +66,16 @@
         </div>
     </section>
 </template>
+
+<script setup>
+const smoothScroll = (id) => {
+    const target = document.querySelector(id);
+    const navbarHeight = document.querySelector('.conteinerNavbar').offsetHeight;
+    if (target) {
+        window.scrollTo({
+            top: target.offsetTop - navbarHeight,
+            behavior: 'smooth'
+        });
+    }
+};
+</script>

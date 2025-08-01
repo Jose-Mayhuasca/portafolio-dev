@@ -13,8 +13,21 @@
                 </h1>
             </div>
             <div class="button slide-in-bottom-delay">
-                <Button label="¡Impulsa tu idea!" class="cta" />
+                <Button label="¡Impulsa tu idea!" class="cta" @click.prevent="smoothScroll('#contactSection')" />
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+const smoothScroll = (id) => {
+    const target = document.querySelector(id);
+    const navbarHeight = document.querySelector('.conteinerNavbar').offsetHeight;
+    if (target) {
+        window.scrollTo({
+            top: target.offsetTop - navbarHeight,
+            behavior: 'smooth'
+        });
+    }
+};
+</script>

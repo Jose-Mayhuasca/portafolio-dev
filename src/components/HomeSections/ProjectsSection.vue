@@ -6,7 +6,7 @@
             </div>
             <div class="content slide-in-right">
                 <Carousel :value="projects" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions"
-                    circular>
+                    circular :autoplayInterval="3000">
                     <template #item="{ data }">
                         <div class="project-item">
                             <Card class="card">
