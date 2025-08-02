@@ -511,7 +511,7 @@ body {
       @media (max-width: $bp-mobile) {
         width: 90%;
         height: auto;
-        margin-top: 3rem;
+        // margin-top: 3rem;
 
         h1 {
           .break {
@@ -1169,6 +1169,11 @@ body {
       border: 1px solid #000;
       gap: 2rem;
 
+      @media (max-width: $bp-mobile) {
+        border-radius: 12px;
+        background-image: url('/src/assets/images/bgContact.png');
+      }
+
       .videoConteiner {
         width: 50%;
         height: 46.5625rem;
@@ -1291,6 +1296,8 @@ body {
           @media (max-width: $bp-mobile) {
             width: 7.4375rem;
             height: 7.4375rem;
+            background-color: #b8a38c75;
+            backdrop-filter: blur(3px); // desenfoque del fondo
           }
 
           .icon {
@@ -1301,6 +1308,7 @@ body {
 
           &:hover {
             transform: scale(1.05);
+            transition: all 0.5s ease;
             box-shadow:
               5px 5px 12px #ffe3c3 inset,
               -5px -5px 12px #706355 inset,
@@ -1312,6 +1320,12 @@ body {
             box-shadow:
               5px 5px 12px #3c2f26 inset,
               -5px -5px 12px #f0bd9a inset;
+            transition: all 0.5s ease;
+
+            @media (max-width: $bp-mobile) {
+              background-color: #96766075;
+              backdrop-filter: blur(3px); // desenfoque del fondo
+            }
           }
         }
       }
@@ -1328,12 +1342,13 @@ body {
   gap: 4rem;
 
   .conteiner {
-    width: 80.875rem;
+    // width: 80.875rem;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 9.625rem;
+    gap: 25rem;
     background-image: url('/src/assets/images/imgFooterBg.jpg');
     background-size: cover;
     position: relative;
@@ -1347,7 +1362,7 @@ body {
     }
 
     .phrase {
-      width: 36.5rem;
+      width: auto;
       height: auto;
       text-align: center;
       display: flex;
@@ -1355,9 +1370,9 @@ body {
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
-      box-shadow: 0 0 45px #1e1e1e;
-      background-color: #fff5;
-      backdrop-filter: blur(6px); // desenfoque del fondo
+      // box-shadow: 0 0 45px #1e1e1e;
+      // background-color: #fff5;
+      // backdrop-filter: blur(6px); // desenfoque del fondo
       padding: 1.5rem 0;
       color: #1e1e1e;
 
