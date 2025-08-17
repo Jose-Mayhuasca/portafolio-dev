@@ -2,7 +2,7 @@
     <section class="contactSection">
         <div class="conteiner">
             <div class="title colorBlue boldItalic slide-in-left">
-                <h2>Contactame</h2>
+                <h2>Contáctame</h2>
             </div>
             <div class="content colorBgContact slide-in-right">
                 <div class="videoConteiner">

@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import NavbarSection from '../components/HomeSections/NavbarSection.vue';
+// import NavbarSection from '../components/HomeSections/NavbarSection.vue';
 import HeroSection from '../components/HomeSections/HeroSection.vue';
 import PresentationSection from '../components/HomeSections/PresentationSection.vue';
 import AboutMeSection from '../components/HomeSections/AboutMeSection.vue';
 import ProjectsSection from '../components/HomeSections/ProjectsSection.vue';
 import ContactSection from '../components/HomeSections/ContactSection.vue';
-import FooterSection from '../components/HomeSections/FooterSection.vue';
+// import FooterSection from '../components/HomeSections/FooterSection.vue';
 import TechnologiesSection from '../components/HomeSections/TechnologiesSection.vue';
 
 </script>
 
-<template>
-    <NavbarSection />
+<template class="homePage">
     <div class="homepage">
         <HeroSection />
         <PresentationSection id="presentationSection" />
@@ -19,7 +18,6 @@ import TechnologiesSection from '../components/HomeSections/TechnologiesSection.
         <TechnologiesSection />
         <ProjectsSection id="projectsSection" />
         <ContactSection id="contactSection" />
-        <FooterSection />
     </div>
 </template>
 
