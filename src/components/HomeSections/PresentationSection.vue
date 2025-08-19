@@ -17,9 +17,9 @@
                 </div>
                 <div class="buttons paragraph slide-in-left-btn">
                     <Button label="¡Conoce más!" class="cta" icon="pi pi-arrow-right" iconPos="right"
-                        @click.prevent="smoothScroll('#aboutMeSection')" />
+                        @click.prevent="goTo('/sobre-mi')" />
                     <Button label="Contáctame" class="secondary" icon="pi pi-envelope" iconPos="right"
-                        @click.prevent="smoothScroll('#contactSection')" />
+                        @click.prevent="goTo('/contactame')" />
                 </div>
             </div>
             <div class="videoConteiner slide-in-right">
@@ -33,14 +33,10 @@
 </template>
 
 <script setup>
-const smoothScroll = (id) => {
-    const target = document.querySelector(id);
-    const navbarHeight = document.querySelector('.conteinerNavbar').offsetHeight;
-    if (target) {
-        window.scrollTo({
-            top: target.offsetTop - navbarHeight,
-            behavior: 'smooth'
-        });
-    }
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const goTo = (page) => {
+    router.push(page);
 };
 </script>

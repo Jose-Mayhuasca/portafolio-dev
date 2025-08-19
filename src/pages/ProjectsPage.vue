@@ -5,7 +5,7 @@ import PreFooterSection from '@/components/ProjectsSections/PreFooterSection.vue
 </script>
 
 <template>
-    <div class="page">
+    <div class="page projectsPage">
         <HeroSection />
         <ProjectGallerySection />
         <PreFooterSection />

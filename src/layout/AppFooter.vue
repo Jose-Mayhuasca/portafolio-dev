@@ -25,16 +25,16 @@
                         <div class="items small regular colorGrey">
                             <ol>
                                 <li>
-                                    <a href="#home" @click.prevent="smoothScroll('#presentationSection')">Inicio</a>
+                                    <a @click.prevent="goTo('/')">Inicio</a>
                                 </li>
                                 <li>
-                                    <a href="#about" @click.prevent="smoothScroll('#aboutMeSection')">Sobre mí</a>
+                                    <a @click.prevent="goTo('/sobre-mi')">Sobre mí</a>
                                 </li>
                                 <li>
-                                    <a href="#projects" @click.prevent="smoothScroll('#projectsSection')">Proyectos</a>
+                                    <a @click.prevent="goTo('/proyectos')">Proyectos</a>
                                 </li>
                                 <li>
-                                    <a href="#contact" @click.prevent="smoothScroll('#contactSection')">Contacto</a>
+                                    <a @click.prevent="goTo('/contactame')">Contacto</a>
                                 </li>
                             </ol>
                         </div>
@@ -68,14 +68,10 @@
 </template>
 
 <script setup>
-const smoothScroll = (id) => {
-    const target = document.querySelector(id);
-    const navbarHeight = document.querySelector('.conteinerNavbar').offsetHeight;
-    if (target) {
-        window.scrollTo({
-            top: target.offsetTop - navbarHeight,
-            behavior: 'smooth'
-        });
-    }
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const goTo = (page) => {
+    router.push(page);
 };
 </script>

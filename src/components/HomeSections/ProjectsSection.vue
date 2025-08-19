@@ -22,7 +22,8 @@
                 </Carousel>
             </div>
             <div class="button paragraph">
-                <Button label="Ver más" class="cta" icon="pi pi-arrow-right" iconPos="right" />
+                <Button label="Ver más" @click.prevent="goTo('/proyectos')" class="cta" icon="pi pi-arrow-right"
+                    iconPos="right" />
             </div>
         </div>
     </section>
@@ -30,9 +31,12 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router';
 import img1 from '@/assets/images/imgProject1.jpg'
 import img2 from '@/assets/images/imgProject2.jpg'
 import img3 from '@/assets/images/imgProject3.jpg'
+
+const router = useRouter();
 
 const projects = ref([
     {
@@ -65,4 +69,8 @@ const responsiveOptions = ref([
         numScroll: 1
     }
 ])
+
+const goTo = (page) => {
+    router.push(page)
+};
 </script>
