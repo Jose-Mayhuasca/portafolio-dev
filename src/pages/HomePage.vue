@@ -15,7 +15,7 @@ import TechnologiesSection from '../components/HomeSections/TechnologiesSection.
         <HeroSection />
         <PresentationSection id="presentationSection" />
         <AboutMeSection id="aboutMeSection" />
-        <TechnologiesSection />
+        <!-- <TechnologiesSection /> -->
         <ProjectsSection id="projectsSection" />
         <ContactSection id="contactSection" />
     </div>

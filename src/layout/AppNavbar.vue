@@ -7,59 +7,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
-import { useRouter } from "vue-router";
+import { ref, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
-
-// const activeSection = ref('presentationSection');
-
-// const smoothScroll = (id) => {
-//     const target = document.querySelector(id);
-//     const navbarHeight = document.querySelector('.conteinerNavbar').offsetHeight;
-//     if (target) {
-//         window.scrollTo({
-//             top: target.offsetTop - navbarHeight,
-//             behavior: 'smooth'
-//         });
-//     }
-// };
-
-// const updateActiveSection = (sectionId) => {
-//     activeSection.value = sectionId;
-//     // Actualizar las clases activas en el DOM
-//     updateMenuItemClasses();
-// };
-
-// const updateMenuItemClasses = () => {
-//     // Remover todas las clases activas
-//     document.querySelectorAll('.p-menubar-item-content').forEach(item => {
-//         item.classList.remove('active');
-//     });
-
-//     // Agregar clase activa al item correspondiente
-//     const menuItems = document.querySelectorAll('.p-menubar-item-content');
-//     const sectionIndex = getSectionIndex(activeSection.value);
-
-//     if (menuItems[sectionIndex]) {
-//         menuItems[sectionIndex].classList.add('active');
-//     }
-// };
-
-// const getSectionIndex = (sectionId) => {
-//     const sections = {
-//         'presentationSection': 0,
-//         'aboutMeSection': 1,
-//         'projectsSection': 2,
-//         'contactSection': 3
-//     };
-//     return sections[sectionId] || 0;
-// };
+const route = useRoute();
 
 const items = ref([
     {
         label: 'Inicio',
         icon: 'pi pi-home',
+        path: '/',
         command: () => {
             router.push('/');
         }
@@ -67,6 +25,7 @@ const items = ref([
     {
         label: 'Sobre Mi',
         icon: 'pi pi-star',
+        path: '/sobre-mi',
         command: () => {
             router.push('/sobre-mi');
         }
@@ -74,6 +33,7 @@ const items = ref([
     {
         label: 'Proyectos',
         icon: 'pi pi-search',
+        path: '/proyectos',
         command: () => {
             router.push('/proyectos');
         }
@@ -81,48 +41,33 @@ const items = ref([
     {
         label: 'Contáctame',
         icon: 'pi pi-envelope',
+        path: '/contactame',
         command: () => {
             router.push('/contactame');
         }
     }
 ]);
 
-// let observer = null;
+const updateActiveState = () => {
+    const currentPath = route.path;
+    items.value.forEach(item => {
+        // Lógica de coincidencia:
+        // Para home ('/'), debe ser coincidencia exacta.
+        // Para otras rutas, usamos startsWith para cubrir sub-rutas (ej: /proyectos/detalle)
+        const isActive = item.path === '/'
+            ? currentPath === '/'
+            : currentPath.startsWith(item.path);
 
-// onMounted(() => {
-//     // Configurar Intersection Observer para detectar secciones visibles
-//     const observerOptions = {
-//         root: null,
-//         rootMargin: '-20% 0px -60% 0px',
-//         threshold: 0
-//     };
+        item.class = isActive ? 'active-route' : '';
+    });
+};
 
-//     observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 const sectionId = entry.target.id;
-//                 updateActiveSection(sectionId);
-//             }
-//         });
-//     }, observerOptions);
-
-//     // Observar todas las secciones
-//     const sections = document.querySelectorAll('#presentationSection, #aboutMeSection, #projectsSection, #contactSection');
-//     sections.forEach(section => {
-//         if (section) {
-//             observer.observe(section);
-//         }
-//     });
-
-//     // Establecer el estado inicial después de que el DOM esté listo
-//     setTimeout(() => {
-//         updateMenuItemClasses();
-//     }, 100);
-// });
-
-// onUnmounted(() => {
-//     if (observer) {
-//         observer.disconnect();
-//     }
-// });
+// Observar cambios en la ruta
+watch(
+    () => route.path,
+    () => {
+        updateActiveState();
+    },
+    { immediate: true }
+);
 </script>

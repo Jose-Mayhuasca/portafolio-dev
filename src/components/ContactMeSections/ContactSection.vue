@@ -2,7 +2,7 @@
     <section class="contactSection">
         <div class="containerContact">
             <div class="title">
-                <h2 class="boldItalic colorBlue">Contacto Directo</h2>
+                <h2 class="bold colorBlue">Contacto Directo</h2>
             </div>
             <div class="content">
                 <div class="gridContainer superSmall semiBol colorWhite">

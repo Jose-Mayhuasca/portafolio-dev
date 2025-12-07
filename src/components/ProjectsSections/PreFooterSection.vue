@@ -6,7 +6,7 @@
                 <h3 class="regularItalic colorWhite">Mis proyectos son solo el comienzo. <br>
                     Juntos podemos crear soluciones digitales únicas, funcionales y con un diseño que marque la
                     diferencia.</h3>
-                <Button @click="goToContact" label="Contáctame" class="cta regularItalic" />
+                <Button @click="goToContact" label="Contáctame" class="cta regular" />
             </div>
         </div>
     </section>
