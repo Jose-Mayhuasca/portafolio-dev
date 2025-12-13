@@ -1,7 +1,7 @@
 <template>
     <section class="technologiesSection">
         <div class="container">
-            <div class="bold colorBlue">
+            <div class="title bold colorBlue">
                 <h2>Stack de Tecnologías</h2>
             </div>
             <div class="technologies-container">
