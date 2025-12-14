@@ -51,10 +51,20 @@
                     </template>
                 </Carousel>
             </div>
-            <!-- <div class="button paragraph">
-                <Button label="Ver más" @click.prevent="goTo('/proyectos')" class="cta" icon="pi pi-arrow-right"
-                    iconPos="right" />
-            </div> -->
+            <Dialog v-model:visible="visible" modal header="Visualización No Disponible">
+                <p>El contenido visual y el acceso a este proyecto están protegidos por derechos de propiedad y
+                    confidencialidad.</p>
+                <p>
+                    La descripción en mi portafolio refleja fielmente las tecnologías y metodologías que apliqué. Estoy
+                    disponible
+                    para profundizar en los aspectos de ingeniería y lógica de negocio de este proyecto durante nuestra
+                    conversación.
+                </p>
+                <div class="buttonsContainer">
+                    <Button label="Contactar" class="primary" @click="goContactMe()"></Button>
+                    <Button label="Cerrar" class="secondary" @click="visible = false"></Button>
+                </div>
+            </Dialog>
         </div>
     </section>
 </template>
@@ -62,11 +72,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
-import img1 from '@/assets/images/img_projects_gallery_1.jpg'
-import img2 from '@/assets/images/img_home_ProjectSection_2.jpg'
+import img1 from '@/assets/images/img_projects_gallery_1.avif'
+import img2 from '@/assets/images/img_home_ProjectSection_2.avif'
 import img3 from '@/assets/images/img_home_ProjectSection_3.avif'
 
 const router = useRouter();
+const visible = ref(false);
 
 const projects = ref([
     {
@@ -114,4 +125,10 @@ function openLink(urlrequested) {
 const goTo = (page) => {
     router.push(page)
 };
+
+const goContactMe = () => {
+    visible.value = false;
+    router.push('/contactame');
+}
+
 </script>

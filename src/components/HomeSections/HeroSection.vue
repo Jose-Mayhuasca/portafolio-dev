@@ -7,18 +7,18 @@
             </video> -->
             <!-- <img :src="img_home_HeroSection" alt=""> -->
             <div class="imagebg"></div>
-            <div class="content slide-in-bottom">
+            <!-- <div class="content slide-in-bottom"> -->
+            <div class="content">
                 <!-- <div class="content"> -->
-                <h1 class="regular colorWhite">Cada <span class="extraBold colorYellow">linea de codigo</span> cuenta.
-                    <br><br class="break">
-                    Cada
-                    <span class="extraBold colorYellow">detalle</span> importa.
+                <h1 class="regular colorWhite">Cada <span class="extraBold colorYellow">linea de codigo</span>
+                    cuenta.<br>Cada<span class="extraBold colorYellow"> detalle</span> importa.
                 </h1>
                 <h4 class="colorWhite regular">Desarrollador web apasionado por crear experiencias <br> digitales
                     excepcionales y
                     funcionales.</h4>
             </div>
-            <div class="button slide-in-bottom-delay">
+            <!-- <div class="button slide-in-bottom-delay"> -->
+            <div class="button">
                 <!-- <div class="button"> -->
                 <Button label="¡Impulsa tu idea!" class="cta" @click.prevent="goTo('/contactame')" />
             </div>

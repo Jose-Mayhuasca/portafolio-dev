@@ -64,10 +64,10 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import img1 from '@/assets/images/img_projects_gallery_1.jpg'
-import img2 from '@/assets/images/img_home_ProjectSection_2.jpg'
+import img1 from '@/assets/images/img_projects_gallery_1.avif'
+import img2 from '@/assets/images/img_home_ProjectSection_2.avif'
 import img3 from '@/assets/images/img_home_ProjectSection_3.avif'
-import img4 from '@/assets/images/img_projects_gallery_4.jpg'
+import img4 from '@/assets/images/img_projects_gallery_4.avif'
 import img5 from '@/assets/images/img_home_ProjectSection_1.avif'
 
 const visible = ref(false);

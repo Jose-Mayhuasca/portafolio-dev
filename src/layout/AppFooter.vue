@@ -11,7 +11,7 @@
                 </h4>
             </div> -->
             <div class="logo">
-                <img src="/src/assets/images/img_footer_logo.png">
+                <img src="/src/assets/images/img_footer_logo.webp" alt="Logo José Mayhuasca Pérez" />
             </div>
             <div class="data small regular">
                 <p class="paragraph semiBold">Email</p>
