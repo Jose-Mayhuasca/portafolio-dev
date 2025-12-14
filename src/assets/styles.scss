@@ -3,6 +3,10 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 /*Fuente Poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -435,7 +439,7 @@ body {
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #888888;
+          // background-color: #888888;
 
           .p-menubar-item-label {
             color: #ffffff; // cambia a blanco al hacer hover sobre el item
@@ -651,7 +655,8 @@ body {
           // color: transparent;
           // -webkit-background-clip: text;
           // background-clip: text;
-          color: #152046;
+          // color: #152046;
+          color: light-dark(#152046, #f6cc2c);
 
           span {
             color: #3838ef;
@@ -902,6 +907,14 @@ body {
     gap: 4rem;
     overflow: clip;
 
+    .title {
+      h2 {
+        @media (prefers-color-scheme: dark) {
+          color: #f6cc2c;
+        }
+      }
+    }
+
     .content {
       width: 80%;
       height: auto;
@@ -913,178 +926,6 @@ body {
       @media (max-width: $bp-mobile) {
         width: 90%;
       }
-
-      // .p-carousel {
-      //   width: 100%;
-      //   height: auto;
-      //   display: flex;
-      //   align-items: center;
-
-      //   .p-carousel-content-container {
-      //     width: 100%;
-      //     height: 100%;
-      //     display: flex;
-      //     align-items: center;
-      //     overflow: visible;
-
-      //     @media (max-width: $bp-mobile) {
-      //       align-items: center;
-      //     }
-
-      //     .p-carousel-content {
-      //       width: 100%;
-      //       height: 100%;
-
-      //       @media (max-width: $bp-mobile) {
-      //         width: 100%;
-      //         display: flex;
-      //       }
-
-      //       .p-carousel-viewport {
-      //         width: 100%;
-      //         height: 100%;
-      //         display: flex;
-      //         align-content: center;
-      //         justify-content: center;
-      //         overflow: visible;
-
-      //         @media (max-width: $bp-mobile) {
-      //           width: 100%;
-      //           overflow: hidden;
-      //           align-items: center;
-      //           justify-content: center;
-      //         }
-
-      //         .p-carousel-item {
-      //           width: 100%;
-      //           height: 100%;
-      //           display: flex;
-      //           justify-content: center;
-
-      //           .project-item {
-      //             width: 100%;
-      //             height: 100%;
-      //             display: flex;
-      //             align-items: center;
-      //             justify-content: center;
-      //           }
-
-      //           @media (max-width: $bp-mobile) {
-      //             align-content: center;
-      //             overflow: visible;
-
-      //             .project-item {
-      //               width: 49%;
-      //               height: 100%;
-      //               display: flex;
-      //               flex-direction: column;
-      //               align-items: center;
-      //               justify-content: center;
-      //             }
-      //           }
-
-      //           .card {
-      //             width: 100%;
-      //             height: auto;
-      //             border-radius: 1.5rem;
-      //             overflow: hidden;
-
-      //             box-shadow: 0 0 30px #0008;
-      //             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      //             transition:
-      //               transform 0.3s ease,
-      //               box-shadow 0.3s ease;
-
-      //             @media (max-width: $bp-mobile) {
-      //               width: 78%;
-      //               height: 98%;
-      //               border: 1px solid #000;
-      //               box-shadow: none;
-      //               transition: none;
-      //             }
-
-      //             &:hover {
-      //               transform: translateY(-10px);
-      //               box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      //               @media (max-width: $bp-mobile) {
-      //                 transform: none;
-      //                 box-shadow: none;
-      //               }
-      //             }
-
-      //             .p-card-header {
-      //               width: 100%;
-      //               height: 11.25rem;
-      //               background-color: #000;
-      //               @media (max-width: $bp-mobile) {
-      //               }
-      //               .cardImage {
-      //                 width: 100%;
-      //                 height: 100%;
-      //                 background-size: cover;
-      //                 background-position: center;
-      //               }
-      //             }
-
-      //             // .cardImage {
-      //             //   width: 100%;
-      //             //   height: 20rem;
-      //             //   object-fit: cover;
-      //             // }
-
-      //             .p-card-content {
-      //               // display: none; /* Oculta el contenido no utilizado */
-      //             }
-
-      //             .cardTitle {
-      //               width: 100%;
-      //               height: 100%;
-      //               display: flex;
-      //               align-items: center;
-      //               justify-content: center;
-      //               text-align: center;
-      //               color: #152046;
-
-      //               @media (max-width: $bp-mobile) {
-      //                 // height: 10%;
-      //               }
-      //             }
-
-      //             .p-card-body {
-      //               height: 100%;
-      //               padding: 1rem 0.5rem;
-      //               display: flex;
-      //               flex-direction: column;
-      //               align-items: center;
-      //               justify-content: center;
-
-      //               @media (max-width: $bp-mobile) {
-      //                 width: auto;
-      //                 height: 5rem;
-      //                 .p-card-title {
-      //                   span {
-      //                     height: auto;
-      //                   }
-      //                 }
-      //               }
-      //             }
-      //           }
-      //         }
-      //       }
-      //     }
-      //   }
-
-      //   .p-carousel-indicator {
-      //     .p-carousel-indicator-button {
-      //       background: #1e1e1e;
-      //     }
-      //   }
-      //   .p-carousel-indicator-active {
-      //     .p-carousel-indicator-button {
-      //       background: #f6cc2c;
-      //     }
-      //   }
-      // }
 
       .p-carousel {
         width: 100%;
@@ -1297,6 +1138,14 @@ body {
     align-items: center;
     justify-content: center;
     gap: 4rem;
+
+    .title {
+      h2 {
+        @media (prefers-color-scheme: dark) {
+          color: #f6cc2c;
+        }
+      }
+    }
 
     .content {
       width: 80%;
@@ -1786,6 +1635,11 @@ body {
 
       .title {
         text-align: center;
+        h2 {
+          @media (prefers-color-scheme: dark) {
+            color: #f6cc2c;
+          }
+        }
       }
 
       .technologies-container {
@@ -1954,6 +1808,15 @@ body {
       justify-items: center;
       align-items: center;
       gap: 3rem;
+
+      .title {
+        text-align: center;
+        h2 {
+          @media (prefers-color-scheme: dark) {
+            color: #f6cc2c;
+          }
+        }
+      }
 
       .gridContainer {
         width: 100%;
@@ -2175,6 +2038,14 @@ body {
         padding: 0 1rem;
       }
 
+      .title {
+        h2 {
+          @media (prefers-color-scheme: dark) {
+            color: #f6cc2c;
+          }
+        }
+      }
+
       .gridContainer {
         width: 100%;
         height: auto;
@@ -2347,7 +2218,7 @@ body {
 
         h3 {
           @media (max-width: $bp-mobile) {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-style: normal;
           }
         }
@@ -2505,6 +2376,14 @@ body {
       @media (max-width: $bp-mobile) {
         width: 100%;
         padding: 0 1rem;
+      }
+
+      .title {
+        h2 {
+          @media (prefers-color-scheme: dark) {
+            color: #f6cc2c;
+          }
+        }
       }
 
       .content {
